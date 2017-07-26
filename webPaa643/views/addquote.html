@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<form class="form-horizontal">
+  <fieldset>
+    <legend>Legend</legend>
+    <div class="form-group">
+      <label for="select" class="col-lg-2 control-label">Ficha</label>
+      <div class="col-lg-10">
+        <select class="form-control" id="select">
+          <option>HP</option>
+          <option>COLAS</option>
+          <option>TRAILERS</option>
+          <option>CARIBEX</option>
+          <option>CHATELAIN</option>
+        </select>
+        <br>        
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Start Date</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="startdate" placeholder="Start Date">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">End Date</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="enddate" placeholder="End Date">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Checkbox
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Radios</label>
+      <div class="col-lg-10">
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+            Option one is this
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            Option two can be something else
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="select" class="col-lg-2 control-label">Ficha</label>
+      <div class="col-lg-10">
+        <select class="form-control" id="select">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        <br>        
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+      <div class="col-lg-10">
+        <textarea class="form-control" rows="3" id="textArea"></textarea>
+        <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $( function() {
+    $( "#startdate" ).datepicker();
+    $( "#enddate" ).datepicker();
+  } );
+</script>
