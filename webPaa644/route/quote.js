@@ -1,5 +1,9 @@
+var bodyParser = require('body-parser');
+
 module.exports = function(app, db){
 	
+	app.use(bodyParser());
+    
 	app.get('/quote', function(req,res){
 
 	res.render('quote',{
@@ -18,80 +22,17 @@ module.exports = function(app, db){
 		});
 	});
     
-    var quote = [];
-
-
 	app.post('/addquote', function(req,res){
-        
-        
 
+        if(req.body.name){
+            
+            //res.redirect('/addquote' + req.body.name);     
+            res.render('addquote'+req.body.name,{
 
-		console.log("cliente " + req.body.cliente);
+                title:'Title',
+                name: 'Add quote' +req.body.name
+            });
+        }
 
-		console.log("destino " + req.body.destino);
-
-		console.log("ficha " + req.body.ficha);
-
-		console.log("startdate " + req.body.startdate);
-
-		console.log("enddate " + req.body.enddate);
-
-		console.log("destino " + req.body.destino);
-
-		console.log("viaje " + req.body.viaje);
-
-		console.log("equipo" + req.body.equipo);
-
-		console.log("tarifaUSD" + req.body.tarifaUSD);
-
-		console.log("tarifaDOP" + req.body.tarifaDOP);		
-
-
-		console.log("cliente " + req.body.cliente);
-
-		console.log("destino " + req.body.destino);
-
-		console.log("ficha " + req.body.ficha);
-
-		console.log("startdate " + req.body.startdate);
-
-		console.log("enddate " + req.body.enddate);
-
-		console.log("destino " + req.body.destino);
-
-		console.log("viaje " + req.body.viaje);
-
-		console.log("equipo" + req.body.equipo);
-
-		console.log("tarifaUSD" + req.body.tarifaUSD);
-
-		console.log("tarifaDOP" + req.body.tarifaDOP);		
-
-
-		db.addQuote(
-
-			{"destino": req.body.cliente,
-
-			"cliente ": req.body.cliente,
-
-			"destino ": req.body.destino,
-
-			"ficha:": req.body.ficha,
-
-			"startdate": req.body.startdate,
-
-			"enddate": req.body.enddate,
-
-			"destino": req.body.destino,
-
-			"viaje":  req.body.viaje,
-
-			"equipo": req.body.equipo,
-
-			"tarifaUSD": req.body.tarifaUSD,
-
-			"tarifaDOP": req.body.tarifaDOP
-            }
-		);
-    });
+	});
 }
