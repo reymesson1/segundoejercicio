@@ -4,51 +4,33 @@
   <fieldset>
     <legend>Add New Quote Trailers</legend>
     <div class="form-group">
-      <label class="col-lg-2 control-label">Cliente</label>
+      <label class="col-lg-2 control-label">Fecha</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" id="tags" name="cliente" placeholder="Cliente">
+        <input type="text" class="form-control" name="fecha" id="fecha" placeholder="Fecha">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Fecha viaje</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" name="fechaviaje" id="fechaviaje" placeholder="Fecha Viaje">        
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Codigo de referencia</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="codigoreferencia" name="codigoreferencia" placeholder="Codigo Referencia">
       </div>
     </div>    
     <div class="form-group">
-      <label class="col-lg-2 control-label">Ficha</label>
+      <label class="col-lg-2 control-label">Ficha de Camion</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" id="ficha" name="ficha" placeholder="Ficha">
+        <input type="text" class="form-control" id="fichacamion" name="fichacamion" placeholder="Ficha Camion">
       </div>
     </div>
     <div class="form-group">
-      <label class="col-lg-2 control-label">Start Date</label>
+      <label class="col-lg-2 control-label">Ficha de Trailers</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" name="startdate" id="startdate" placeholder="Start Date">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="col-lg-2 control-label">End Date</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" name="enddate" id="enddate" placeholder="End Date">        
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="col-lg-2 control-label">Destino</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" name="destino" id="destino" placeholder="Destino">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="col-lg-2 control-label">Visita/Viaje</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" name="viaje" placeholder="Visita o Viaje">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="col-lg-2 control-label">Equipo</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" id="equipo" name="equipo" placeholder="Equipo">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="col-lg-2 control-label">Tarifa USD</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" name="tarifaUSD" id="tarifaUSD" placeholder="Tarifa USD">
+        <input type="text" class="form-control" name="fichatrailers" id="fichatrailers" placeholder="Ficha Trailers">
       </div>
     </div>
     <div class="form-group">
@@ -69,38 +51,7 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
   $( function() {
-    $( "#startdate" ).datepicker();
-    $( "#enddate" ).datepicker();
-
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    $( "#tags" ).autocomplete({
-      source: availableTags
-    });
-    $( "#destino" ).autocomplete({
-      source: availableTags
-    });
-  } );
+    $( "#fecha" ).datepicker();
+    $( "#fechaviaje" ).datepicker();
+  })
 </script>
