@@ -1,0 +1,144 @@
+<div id="copia">
+
+<style type="text/css">
+   body {
+    
+}
+@media print {
+    .panel-heading {
+        display:none
+    }
+}
+
+h6{
+
+    line-height: 1.0em;
+}
+</style>
+<div class="container">
+    <div class="row">
+        <h1>Logo</h1>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <h6>GRUPO CAPXOR, S.R.L</h6>
+            <h6>AVE. GUSTAVO MEJIA RICART, NO.237</h6>
+            <h6>PLAZA JOABA, LOCAL, 3F, ENS. QUISQUEYA</h6>
+            <h6>DN., REPUBLICA DOMINICANA</h6>
+            <h6>RNC: 1-31-3072201</h6>        
+        </div>
+        <div class="col-xs-6">
+            <div class="row">
+                {{#each invoices}}
+                    <h5 style="font-weight: bold;">NCF: A0100100101000000302</h5>
+                    <h5>NO. FACTURA: 302</h5>
+                    <h5>FECHA: {{fecha}}</h5>
+                    <h5>CLIENTE: </h5>                    
+                    <h5>CARTONES DEL CARIBE,S.A.S.</h5>                    
+                    <h5>AUTOPISTA LAS AMERICAS, KM.22, STO. DGO. ESTE, R.D.</h5>                    
+                    <h5>RNC: 1-01-68251-5</h5>                    
+                {{/each}}
+            </div>            
+        </div>        
+    </div>
+    <div class="row">
+        <h4>DETALLE DE LA FACTURA</h4>
+        <h4>TRANSPORTACION  EN FLAT-BEDS CARTONES DEL CARIBE - TERRITORIO NACIONAL</h4>
+    </div>
+</div>
+<br/>
+<div class="row">
+    
+    <!--table-->
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>CODIGO</th>
+                <th>DESTINO</th>
+                <th>CANTIDAD</th>
+                <th>PRECIO UNIT.</th>
+                <th>SUB-TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each invoices}}
+            <tr>
+                <td>{{fecha}}</td>
+            </tr>
+            {{/each}}            
+            <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+    <!--end of table-->
+</div>
+
+<div class="row">
+    <h5>Nota: Tiene viaje con tarifa especial de Santo Domingo.</h5>    
+</div>
+
+<div class="row">
+    <div class="col-xs-3">
+    </div>
+    <div class="col-xs-6">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h5>REALIZADO POR:___________________________</h5> 
+        <h6 style="margin-left:120px;">Lic.Eduardo A. Sibilia</h6>  
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h5>RECIBIDO POR:_____________________________</h5>   
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>      
+    </div>
+    <div class="col-xs-3">
+    </div>
+</div>
+{{> printconduce}}

@@ -1,0 +1,51 @@
+<form action="/printinvoice" method="post">
+   <div id="original" style="display: normal">
+      <div class="container">
+         <div class="row">
+            <h1>{{name}}</h1>
+         </div>
+      <hr>
+      <br>
+      <div class="row">      
+         <div class="col-md-6">
+             <div class="input-group">
+               {{{inputSearch value=object.name}}}
+               <span class="input-group-btn">
+                 <button class="btn btn-secondary" type="button">Go!</button>
+               </span>
+             </div>
+         </div>      
+      </div>
+      <div class="pull-right">
+         <button id="button" value="button" class="btn btn-primary">Imprimir</button>
+      </div>
+      </div>
+      <br/>
+      <div >
+         <table class="table table-bordered table-striped table-hover">
+            <thead class="thead-default">
+               <tr>   
+                  <th>&nbsp;</th>         
+                  <th>ID Factura</th>
+                  <th>Fecha</th>
+                  <th>Cliente</th>
+                  <th>Items</th>            
+                  <th>Tipo Conduce</th>
+               </tr>
+            </thead>
+            <tbody>
+              {{#search invoices}}                                 
+               <tr>
+                  <td><input type="checkbox" name="idSelected" value="{{idFactura}}"></td>            
+                  <td> {{idFactura}} </td>                    
+                  <td>{{fecha}}</td>                    
+                  <td>{{cliente}}</td>                    
+                  <td>{{items}}</td>                    
+                  <td>{{tipoconduce}}</td>                    
+               </tr>
+              {{/search}}         
+            </tbody>
+         </table>
+      </div>
+   </div>   
+</form>

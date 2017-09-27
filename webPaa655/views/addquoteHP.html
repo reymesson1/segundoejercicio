@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<form class="form-horizontal" action="/addquotehp" method="post">
+  <fieldset>
+    <legend>{{name}}</legend>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Fecha</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" name="fecha" id="fecha" placeholder="Fecha">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Fecha viaje</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" name="fechaviaje" id="fechaviaje" placeholder="Fecha Viaje">        
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Destino</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="destino" name="destino" value="Hatillo Palma" placeholder="Destino">
+      </div>
+    </div>    
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Codigo de referencia</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="codigoreferencia" name="codigoreferencia" placeholder="Codigo Referencia">
+      </div>
+    </div>    
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Ficha de camion</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="fichacamion" name="fichacamion" placeholder="Ficha Camion">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Ficha de Trailers</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" name="fichatrailers" id="fichatrailers" placeholder="Ficha Trailers">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Tarifa DOP</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" name="tarifaDOP" id="tarifaDOM" placeholder="Tarifa DOP">
+      </div>
+    </div>    
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $( function() {
+    $( "#fecha" ).datepicker();
+    $( "#fechaviaje" ).datepicker();
+  })
+</script>

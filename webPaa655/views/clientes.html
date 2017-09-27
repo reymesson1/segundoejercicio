@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<legend>{{name}}</legend>
+<div class="container">
+  <div class="col-md-4">
+    <form class="form-horizontal" action="/tablaclientes" method="post">
+      <fieldset>        
+        <div class="form-group">
+          <label class="col-lg-2 control-label">Nombre</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" name="nombre" placeholder="Nombre Cliente">
+          </div>
+        </div>           
+        <div class="form-group">
+          <label class="col-lg-2 control-label">RNC</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" name="rnc" placeholder="RNC">
+          </div>
+        </div>           
+        <div class="form-group">
+          <label class="col-lg-2 control-label">Direccion</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" name="direccion" placeholder="Direccion">
+          </div>
+        </div>           
+        <div class="form-group">
+          <label class="col-lg-2 control-label">Telefono</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" name="telefono" placeholder="Telefono">
+          </div>
+        </div>           
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+            <button type="reset" class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <div class="col-md-8"  style="overflow: scroll;height:400px;">
+       <table class="table table-bordered table-striped table-hover">
+          <thead class="thead-default">
+             <tr>                     
+                <th>ID</th>                
+                <th>Nombre Cliente</th>            
+                <th>RNC</th>            
+                <th>Direccion</th>            
+                <th>Telefono</th>            
+                <th>Estado</th>
+             </tr>
+          </thead>
+          <tbody>
+            {{#each clientes}}
+             <tr>                  
+                <td>{{id}}</td>                
+                <td>{{nombre}}</td>                    
+                <td>{{rnc}}</td>                    
+                <td>{{direccion}}</td>                    
+                <td>{{telefono}}</td>                    
+                <td>{{estado}}</td>                    
+             </tr>
+            {{/each}}              
+          </tbody>
+       </table>  
+  </div>
+</div>

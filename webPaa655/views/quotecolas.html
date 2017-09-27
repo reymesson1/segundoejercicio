@@ -1,0 +1,50 @@
+<div class="container">
+   <div class="row">
+      <h1>{{name}}</h1>
+   </div>
+<hr>
+</div>
+<div class="row">
+	<div class="col-md-offset-10">
+		<a href="/addquotecolas" class="btn btn-primary">Add Quote</a>	
+		<button class="btn btn-primary">Edit Quote</button>	
+	</div>
+</div>
+<br>
+<form action="/addinvoice" method="post">
+<div class="table-responsive">
+   <table class="table">
+      <thead>
+         <tr>
+            <th>&nbsp;</th>
+            <th>Fecha</th>
+            <th>Fecha Viaje</th>
+            <th>Codigo de Referencia</th>
+            <th>Ficha Patana</th>
+            <th>Ficha Equipo</th>
+            <th>Tarifa USD</th>
+            <th>Tarifa DOP</th> 
+            <th>Tipo Conduce</th>           
+         </tr>
+      </thead>
+      <tbody>
+        {{#each quotes}}
+         <tr>            
+            <td><input type="checkbox" name="numeroconduce" value="{{idConduce}}"></td>
+            <td>{{fecha}}</td>        
+            <td>{{fechaviaje}}</td>        
+            <td>{{codigoreferencia}}</td>        
+            <td>{{fichapatana}}</td>        
+            <td>{{fichaequipo}}</td>        
+            <td>{{tarifaUSD}}</td>        
+            <td>{{tarifaDOP}}</td>        
+            <td>{{tipoconduce}}</td>                    
+         </tr>
+        {{/each}}         
+      </tbody>
+   </table>
+</div>
+<div class="pull-right">
+      <button class="btn btn-success" name="tipoconduce" value="colas" type="submit">Facturar</button> 
+</div>
+</form>

@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<legend>{{name}}</legend>
+<div class="container">
+  <div class="col-md-4">
+    <form class="form-horizontal" action="/tarifaxrutas" method="post">
+      <fieldset>
+        <div class="form-group">
+          <label class="col-lg-2 control-label">Desde</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" name="desde" placeholder="Desde">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-2 control-label">Hasta</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" name="hasta" placeholder="Hasta">        
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-2 control-label">Precio</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" name="precio" placeholder="Precio">
+          </div>
+        </div>           
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+            <button type="reset" class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <div class="col-md-8">
+  
+  
+  
+           <table class="table table-bordered table-striped table-hover">
+              <thead class="thead-default">
+                 <tr>                     
+                    <th>ID</th>
+                    <th>Desde</th>
+                    <th>Hasta</th>
+                    <th>Precio</th>            
+                    <th>Estado</th>
+                 </tr>
+              </thead>
+              <tbody>
+                {{#each rutas}}
+                 <tr>                  
+                    <td>{{id}}</td>
+                    <td>{{desde}}</td>                    
+                    <td>{{hasta}}</td>                                      
+                    <td>{{precio}}</td>                    
+                    <td>{{estado}}</td>                    
+                 </tr>
+                {{/each}}              
+              </tbody>
+           </table>
+  
+  
+  
+  </div>
+</div>
